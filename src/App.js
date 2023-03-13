@@ -10,9 +10,18 @@ function App() {
     setCount(count + 1);
   }
  
+  const resetCount = () => {
+    setCount(0);
+  }
+
   return (
-    <div className="App" onClick={handleOnClick}>
+    <div>
+    <button className="App" onClick={handleOnClick}>
       {`You clicked ${count}`} times. 
+    </button>
+    <button onClick={resetCount}>
+      Reset Count.
+    </button>
     </div>
   );
 }
